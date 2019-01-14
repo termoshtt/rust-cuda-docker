@@ -11,6 +11,6 @@ RUN apt-get update \
  && apt-get update \
  && apt-get install -yq cuda-libraries-dev-10-0
 
-# Install nightly Rust
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
+# Install stable Rust
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH $PATH:/root/.cargo/bin
